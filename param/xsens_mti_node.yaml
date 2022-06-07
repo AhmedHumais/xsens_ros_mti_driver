@@ -9,7 +9,7 @@ baudrate: 921600 # non necessary for some devices
 ## Log file (optional), placed in ~/.ros/ otherwise use absolute path
 # log_file: log.mtb
 
-publisher_queue_size: 1
+publisher_queue_size: 2
 
 # TF transform frame_id (default: imu_link), you may want to change it if you use multiple devices
 #frame_id: "imu_link"
@@ -19,7 +19,7 @@ pub_imu: true
 pub_quaternion: true
 pub_mag: false
 pub_angular_velocity: true
-pub_acceleration: true
+pub_acceleration: false
 pub_free_acceleration: true
 pub_dq: false
 pub_dv: false
