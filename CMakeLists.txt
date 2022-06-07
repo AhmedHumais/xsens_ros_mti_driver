@@ -68,3 +68,21 @@ target_link_libraries(
 	${catkin_LIBRARIES}
 )
 
+# Install targets
+install(
+  TARGETS
+    xsens_mti_node
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+# Install directories
+install(
+  DIRECTORY
+    launch
+    param
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+add_custom_command(TARGET xsens_mti_node
+    PRE_BUILD COMMAND make -C ${CMAKE_CURRENT_SOURCE_DIR}/lib/xspublic
+)
